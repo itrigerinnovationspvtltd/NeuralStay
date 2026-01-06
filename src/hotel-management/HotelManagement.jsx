@@ -42,21 +42,21 @@ const restaurant = [
 
 const HotelManagement = () => {
   return (
-    <div className="space-y-8 md:ml-64 py-20">
+    <div className="space-y-8 px-6 md:pl-70 py-20 bg-gray-50 dark:bg-linear-to-br from-gray-900 via-black to-gray-900 text-gray-800 dark:text-gray-100">
 
       <div>
         <h1 className="text-3xl font-bold">Hotel Management</h1>
-        <p className="text-gray-400">Manage rooms, services and operations</p>
+        <p className="text-gray-500">Manage rooms, services and operations</p>
       </div>
 
       {/* STATS */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         {stats.map((s, i) => (
-          <div key={i} className="bg-white/10 border border-white/20 rounded-xl p-5 flex justify-between items-center">
+          <div key={i} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 rounded-xl p-5 flex justify-between items-center">
             <div>
-              <p className="text-sm text-gray-400">{s.title}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{s.title}</p>
               <h2 className="text-3xl font-bold">{s.value}</h2>
-              <p className="text-xs text-gray-400">{s.sub}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">{s.sub}</p>
             </div>
             <div className={`p-3 rounded-lg text-white ${s.color}`}>{s.icon}</div>
           </div>
@@ -67,14 +67,14 @@ const HotelManagement = () => {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
 
         {/* MODULES */}
-        <div className="xl:col-span-2 bg-white/10 rounded-xl border border-white/20 p-5">
+        <div className="xl:col-span-2 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-white/10 p-5">
           <h2 className="text-lg font-semibold mb-4">Hotel Modules</h2>
           <div className="space-y-4">
             {bookings.map((b, i) => (
-              <div key={i} className="flex justify-between items-center border-b border-white/10 pb-3">
+              <div key={i} className="flex justify-between items-center border-b border-gray-200 dark:border-white/10 pb-3">
                 <div>
                   <p className="font-medium">{b.name}</p>
-                  <p className="text-sm text-gray-400">{b.room} • {b.time}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{b.room} • {b.time}</p>
                 </div>
                 <span className="bg-indigo-500/20 text-indigo-400 text-xs px-3 py-1 rounded-full">
                   {b.status}
@@ -85,13 +85,13 @@ const HotelManagement = () => {
         </div>
 
         {/* ALERTS */}
-        <div className="bg-white/10 rounded-xl border border-white/20 p-5">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-white/10 p-5">
           <h2 className="text-lg font-semibold mb-4">Housekeeping Alerts</h2>
           <div className="space-y-4">
             {alerts.map((a, i) => (
-              <div key={i} className="border-b border-white/10 pb-3">
+              <div key={i} className="border-b border-gray-200 dark:border-white/10 pb-3">
                 <p className="text-sm">{a.text}</p>
-                <p className="text-xs text-gray-400">{a.time}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">{a.time}</p>
               </div>
             ))}
           </div>
@@ -102,7 +102,7 @@ const HotelManagement = () => {
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
 
         {/* REVENUE */}
-        <div className="bg-white/10 rounded-xl border border-white/20 p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-white/10 p-6">
           <h2 className="text-lg font-semibold mb-4">Service Revenue Overview</h2>
           <div className="space-y-4">
             {revenue.map((r, i) => (
@@ -111,7 +111,7 @@ const HotelManagement = () => {
                   <span>{r.label}</span>
                   <span>{r.amount}</span>
                 </div>
-                <div className="w-full h-2 bg-white/10 rounded">
+                <div className="w-full h-2 bg-gray-200 dark:bg-white/10 rounded">
                   <div className={`h-2 rounded ${r.color}`} style={{ width: r.percent }}></div>
                 </div>
               </div>
@@ -120,7 +120,7 @@ const HotelManagement = () => {
         </div>
 
         {/* HOUSEKEEPING */}
-        <div className="bg-white/10 rounded-xl border border-white/20 p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-white/10 p-6">
           <h2 className="text-lg font-semibold mb-4">Housekeeping Status</h2>
           <div className="space-y-2 text-sm">
             {restaurant.map((r, i) =>
@@ -130,7 +130,7 @@ const HotelManagement = () => {
                     <span>{r.label}</span>
                     <span>{r.value}</span>
                   </div>
-                  <div className="w-full h-2 bg-white/10 rounded">
+                  <div className="w-full h-2 bg-gray-200 dark:bg-white/10  rounded">
                     <div className="h-2 bg-green-400 rounded" style={{ width: r.percent }}></div>
                   </div>
                 </div>

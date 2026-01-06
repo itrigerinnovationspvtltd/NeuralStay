@@ -35,10 +35,10 @@ function App() {
         </>
       ) : (
         // After Login
-        <div className="flex min-h-screen">
+        <div className="flex min-h-screen w-full bg-gray-50 dark:bg-linear-to-br from-gray-900 via-black to-gray-900">
           <Sidebar onLogout={() => setLoggedIn(false)} />
           <Topbar onLogout={() => setLoggedIn(false)} />
-          <main className="flex-1   px-6 bg-linear-to-br from-gray-900 via-black to-gray-900 text-white">
+          <main className="flex-1">
             <Routes>
               <Route path="/" element={<Navigate to="/dashboard" />} />
               <Route path="/dashboard" element={<Dashboard />} />

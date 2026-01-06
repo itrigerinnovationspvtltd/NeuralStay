@@ -14,22 +14,22 @@ const HotelProfile = () => {
   ];
 
   return (
-    <div className="md:ml-64 py-20 px-6 text-white">
+    <div className="md:pl-70 py-20 px-6 bg-gray-50 dark:bg-linear-to-br from-gray-900 via-black to-gray-900 text-gray-800 dark:text-gray-100">
 
       <h1 className="text-3xl font-bold mb-6">Hotel Profile</h1>
 
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
 
         {/* Profile Form */}
-        <div className="xl:col-span-2 bg-white/10 border border-white/20 rounded-xl p-6 space-y-4">
+        <div className="xl:col-span-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 rounded-xl p-6 space-y-4">
 
           {fields.map((f, i) => (
             <div key={i}>
-              <label className="text-sm text-gray-400">{f.label}</label>
+              <label className="text-sm text-gray-500 dark:text-gray-400 font-bold">{f.label}</label>
               <input
                 type={f.type || "text"}
                 placeholder={f.placeholder}
-                className="w-full mt-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full mt-1 px-4 py-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
           ))}
@@ -40,14 +40,14 @@ const HotelProfile = () => {
         </div>
 
         {/* Info Card */}
-        <div className="bg-white/10 border border-white/20 rounded-xl p-6 space-y-4">
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 rounded-xl p-6 space-y-4">
           <div className="flex items-center gap-3 text-indigo-400">
             <Building2 /> Business Details
           </div>
-          <div className="flex items-center gap-3 text-gray-300"><Phone /> Customer Support: 24x7</div>
-          <div className="flex items-center gap-3 text-gray-300"><Mail /> support@neuralstay.com</div>
-          <div className="flex items-center gap-3 text-gray-300"><Clock /> Check-in: 12 PM</div>
-          <div className="flex items-center gap-3 text-gray-300"><MapPin /> Rajasthan, India</div>
+          <div className="flex items-center gap-3 text-gray-500 dark:text-gray-400"><Phone /> Customer Support: 24x7</div>
+          <div className="flex items-center gap-3 text-gray-500 dark:text-gray-400"><Mail /> support@neuralstay.com</div>
+          <div className="flex items-center gap-3 text-gray-500 dark:text-gray-400"><Clock /> Check-in: 12 PM</div>
+          <div className="flex items-center gap-3 text-gray-500 dark:text-gray-400"><MapPin /> Rajasthan, India</div>
         </div>
 
       </div>

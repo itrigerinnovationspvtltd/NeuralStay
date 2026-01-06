@@ -1,23 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import {
-  Menu,
-  X,
-  Home,
-  BedDouble,
-  Calendar,
-  User,
-  DollarSign,
-  Utensils,
-  Users,
-  BarChart2,
-  Settings,
-  LogOut,
-  ChevronDown,
-} from "lucide-react";
+import { Menu, X, Home, BedDouble, Calendar, User, DollarSign, Utensils, Users, BarChart2,
+  Settings, LogOut, ChevronDown, Moon, Sun} from "lucide-react";
+import useTheme from "../context/useTheme";
 
 const Sidebar = ({ onLogout }) => {
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
@@ -77,14 +66,20 @@ const Sidebar = ({ onLogout }) => {
       {/* Mobile Header */}
       <div className="md:hidden fixed top-0 w-full bg-gray-900 p-4 flex justify-between z-50">
         <h1 className="text-xl font-bold text-white">NeuralStay</h1>
+        <div className="flex gap-4">
+        {/* Theme Toggle */}
+        <button onClick={toggleTheme} className="relative w-8 h-8 bg-gray-600 dark:bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white dark:text-white hover:dark:bg-white/20 hover:bg-gray-700">
+         {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
         <button className="text-white" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
+        </div>
       </div>
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-screen bg-gray-900 text-white w-64 z-40 transition-transform
+        className={`fixed top-0 left-0 h-screen bg-gray-900 text-white w-full md:w-64 z-40 transition-transform 
         ${open ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
       >
         <div className="flex flex-col h-full">
