@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Icon */}
-        <div className="flex gap-4">
+        <div className="md:hidden flex gap-4">
         {/* Theme Toggle */}
           <button onClick={toggleTheme} className="md:hidden relative w-8 h-8 bg-gray-600 dark:bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white dark:text-white hover:dark:bg-white/20 hover:bg-gray-700">
            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
