@@ -16,7 +16,7 @@ const Navbar = () => {
         {/* Logo */}
         <h1
           onClick={() => navigate("/")}
-          className="text-2xl font-extrabold tracking-wide bg-linear-to-r from-indigo-400 via-pink-400 to-purple-500 bg-clip-text text-transparent cursor-pointer"
+          className="text-2xl font-extrabold tracking-wide text-gray-800 dark:text-white cursor-pointer"
         >
           NeuralStay
         </h1>
@@ -25,17 +25,17 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
 
           {/* Theme Toggle */}
-                  <button onClick={toggleTheme} className=" relative w-10 h-10 bg-gray-600 dark:bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white dark:text-white hover:dark:bg-white/20 hover:bg-gray-700">
+                  <button onClick={toggleTheme} className=" relative w-10 h-10 bg-gray-800 dark:bg-white backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white dark:text-gray-800 hover:dark:bg-gray-200 hover:bg-gray-700">
                     {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
                   </button>
 
-          <button onClick={() => navigate("/login")} className="px-6 py-2 rounded-full font-semibold text-white 
-            bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 hover:scale-105 transition shadow-lg">
+          <button onClick={() => navigate("/login")} className="px-6 py-2 rounded-full font-semibold dark:text-gray-800 text-white bg-gray-800 dark:bg-white
+             hover:scale-105 transition shadow-lg cursor-pointer">
             Login
           </button>
 
-          <button onClick={() => navigate("/signup")} className="relative px-6 py-2 rounded-full font-semibold text-white 
-            bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 hover:scale-105 transition shadow-lg">
+          <button onClick={() => navigate("/signup")} className="px-6 py-2 rounded-full font-semibold dark:text-gray-800 text-white bg-gray-800 dark:bg-white
+             hover:scale-105 transition shadow-lg cursor-pointer">
             Signup
           </button>
         </div>
@@ -43,10 +43,10 @@ const Navbar = () => {
         {/* Mobile Icon */}
         <div className="md:hidden flex gap-4">
         {/* Theme Toggle */}
-          <button onClick={toggleTheme} className="md:hidden relative w-8 h-8 bg-gray-600 dark:bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white dark:text-white hover:dark:bg-white/20 hover:bg-gray-700">
+          <button onClick={toggleTheme} className="md:hidden relative w-8 h-8 bg-gray-800 dark:bg-white backdrop-blur-sm borderbackdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white dark:text-gray-800 hover:dark:bg-gray-200 hover:bg-gray-700">
            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
            </button>
-        <button onClick={() => setOpen(!open)} className="md:hidden text-indigo-500">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-gray-800 dark:text-white">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
         </div>
@@ -55,15 +55,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden px-6 pb-6 flex flex-col gap-3 animate-slideDown backdrop-blur-xl bg-white dark:bg-black/40">
+        <div className="md:hidden px-6 pb-6 flex flex-col gap-3 animate-slideDown backdrop-blur-xl bg-white/10 dark:bg-black/40">
 
-          <button onClick={() => {navigate("/login"); setOpen(false)}} className="w-full py-2 rounded-xl font-semibold text-white 
-            bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <button onClick={() => {navigate("/login"); setOpen(false)}} className="w-full py-2 rounded-xl font-semibold dark:text-gray-800 text-white bg-gray-800 dark:bg-white ">
             Login
           </button>
 
-          <button onClick={() => {navigate("/signup"); setOpen(false)}} className="w-full py-2 rounded-xl font-semibold text-white 
-            bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <button onClick={() => {navigate("/signup"); setOpen(false)}} className="w-full py-2 rounded-xl font-semibold dark:text-gray-800 text-white bg-gray-800 dark:bg-white">
             Signup
           </button>
         </div>

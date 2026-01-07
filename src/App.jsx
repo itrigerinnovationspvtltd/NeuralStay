@@ -9,6 +9,7 @@ import Sidebar from "./components/Sidebar"
 import HotelManagement from "./hotel-management/HotelManagement"
 import HotelProfile from "./hotel-management/HotelProfile "
 import Topbar from "./components/Topbar "
+import ForgotPassword from "./Auth/ForgotPassword"
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
               path="/signup"
               element={<SignUp onLogin={() => setLoggedIn(true)} />}
             />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="*" element={<Navigate to="/login" />} />
           </Routes>
         </>
