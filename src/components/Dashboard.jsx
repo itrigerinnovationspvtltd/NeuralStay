@@ -38,7 +38,7 @@ const restaurant = [
 
 const Dashboard = () => {
   return (
-    <div className="space-y-8 px-6 md:pl-70 py-20 w-full bg-gray-50 dark:bg-linear-to-br from-gray-900 via-black to-gray-900 text-gray-800 dark:text-gray-100">
+    <div className="space-y-8 px-6 md:pl-70 py-20 w-full bg-[#F3F4F6] dark:bg-[#0F172A] text-gray-800 dark:text-gray-100">
 
       <div>
         <h1 className="text-3xl font-bold">Dashboard</h1>
