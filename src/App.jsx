@@ -10,6 +10,7 @@ import HotelManagement from "./hotel-management/HotelManagement"
 import HotelProfile from "./hotel-management/HotelProfile "
 import Topbar from "./components/Topbar "
 import ForgotPassword from "./Auth/ForgotPassword"
+import { Toaster } from "react-hot-toast"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         // --- Before Login ---
         <>
           <Navbar />
+          <Toaster position="top-right" reverseOrder={false} />
           <Routes>
             <Route
               path="/login"
