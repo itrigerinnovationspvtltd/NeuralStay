@@ -21,12 +21,14 @@ const Sidebar = ({ onLogout }) => {
       path: "/hotel",
       submenu: [
         { title: "Hotel Profile", path: "/hotel/profile" },
-        { title: "Floor Management", path: "/floor" },
-        { title: "Seasonal & special pricing", path: "/pricing" },
-        { title: "Add-on Services", path: "/add-on" },
-        { title: "Housekeeping", path: "/housekeeping" },
+        { title: "Floor Management", path: "/hotel/floor" },
+        { title: "Room Management", path: "/hotel/room" },
+        { title: "Seasonal & special pricing", path: "/hotel/prices" },
+        { title: "Add-on Services", path: "/hotel/add-ons" },
+        { title: "Housekeeping", path: "/hotel/housekeeping" },
       ],
     },
+    { title: "Reservation & Booking", icon: <Calendar />, path: "/booking" },
     {
       title: "Guest Management",
       icon: <User />,
@@ -38,9 +40,6 @@ const Sidebar = ({ onLogout }) => {
         { title: "Blacklisted Guests", path: "/blacklisted-guest" },
       ],
     },
-
-    { title: "Reservation & Booking", icon: <Calendar />, path: "/bookings" },
-
     { title: "Front Office & Billing", icon: <DollarSign />, path: "/billing" },
 
     {

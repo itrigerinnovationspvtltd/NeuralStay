@@ -18,3 +18,20 @@
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fadeIn { animation: fadeIn .25s ease-out; }
+
+
+.card{
+  @apply bg-white dark:bg-[#111827] border border-gray-200 dark:border-white/10 rounded-xl p-6;
+}
+.input{
+  @apply w-full mt-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0B0F1A] outline-none focus:ring-2 focus:ring-blue-700;
+}
+.btn-green{
+  @apply bg-blue-700 hover:bg-blue-700 text-white rounded-lg px-4 py-2;
+}
+.btn-outline{
+  @apply border rounded-lg px-4 py-2 bg-white dark:bg-[#111827] dark:border-white/10;
+}
+.check-tile{
+  @apply flex items-center gap-2 border dark:border-white/10 rounded-lg px-3 py-2 cursor-pointer hover:border-blue-700;
+}

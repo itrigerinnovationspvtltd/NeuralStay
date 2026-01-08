@@ -11,6 +11,12 @@ import HotelProfile from "./hotel-management/HotelProfile "
 import Topbar from "./components/Topbar "
 import ForgotPassword from "./Auth/ForgotPassword"
 import { Toaster } from "react-hot-toast"
+import FloorManagement from "./hotel-management/FloorManagement"
+import RoomManagement from "./hotel-management/RoomManagement"
+import Housekeeping from "./hotel-management/Housekeeping"
+import Booking from "./booking/Booking"
+import SpecialPrices from "./hotel-management/SpecialPrices"
+import AddOnServices from "./hotel-management/AddOnServices"
 
 function App() {
 
@@ -48,6 +54,12 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/hotel" element={<HotelManagement />} />
               <Route path="/hotel/profile" element={<HotelProfile />} />
+              <Route path="/hotel/floor" element={<FloorManagement />} />
+              <Route path="/hotel/room" element={<RoomManagement />} />
+              <Route path="/hotel/housekeeping" element={<Housekeeping />} />
+              <Route path="/hotel/prices" element={<SpecialPrices />} />
+              <Route path="/hotel/add-ons" element={<AddOnServices />} />
+              <Route path="/booking" element={<Booking />} />
             </Routes>
           </main>
         </div>
