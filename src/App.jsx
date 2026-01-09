@@ -59,7 +59,7 @@ function App() {
               <Route path="/hotel/housekeeping" element={<Housekeeping />} />
               <Route path="/hotel/prices" element={<SpecialPrices />} />
               <Route path="/hotel/add-ons" element={<AddOnServices />} />
-              <Route path="/booking" element={<Booking />} />
+              <Route path="/booking" element={<Booking />} /> 
             </Routes>
           </main>
         </div>
